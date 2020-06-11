@@ -13,7 +13,6 @@ export default class Engine {
     private TANK_DIRECTION: "LEFT" | "TOP" | "RIGHT" | "BOTTOM" = "TOP";
     private COLORS = ["#080", "#880", "#F00"];
     private COOLDOWN = false;
-    private TANK_TIMER = 0;
 
     constructor() {
         this.GAME_FIELD = <HTMLCanvasElement>document.getElementById("game_field");
@@ -280,6 +279,7 @@ export default class Engine {
     private keyHandler = (e: KeyboardEvent): void => {
         switch(e.key) {
             case "a":
+            case "ф":
                 if (this.TANK_DIRECTION === "LEFT") {
                     this.moveTank("LEFT");
                 } else {
@@ -288,6 +288,7 @@ export default class Engine {
                 break;
 
             case "w":
+            case "ц":
                 if (this.TANK_DIRECTION === "TOP") {
                     this.moveTank("TOP");
                 } else {
@@ -296,6 +297,7 @@ export default class Engine {
                 break;
 
             case "d":
+            case "в":
                 if (this.TANK_DIRECTION === "RIGHT") {
                     this.moveTank("RIGHT");
                 } else {
@@ -304,6 +306,7 @@ export default class Engine {
                 break;
 
             case "s":
+            case "ы":
                 if (this.TANK_DIRECTION === "BOTTOM") {
                     this.moveTank("BOTTOM");
                 } else {
@@ -312,6 +315,7 @@ export default class Engine {
                 break;
 
             case "p":
+            case "з":
                 this.shoot();
                 break;
         }
