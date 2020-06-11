@@ -16,6 +16,15 @@
                 position: fixed;
                 left: 0;
                 top: 0;
+                border: solid 2px white;
+            }
+            .game p {
+                margin: 0;
+                margin-bottom: 4px;
+                color: #080;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 20px;
+                font-weight: 600;
             }
             #game_field {
                 background: black;
@@ -24,6 +33,7 @@
     </head>
     <body>
         <div class="game">
+            <p>a, w, s, d - move, p - shoot</p>
             <canvas id="game_field"></canvas>
         </div>
     </body>
